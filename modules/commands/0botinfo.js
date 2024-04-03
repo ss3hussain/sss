@@ -24,7 +24,7 @@ const time = process.uptime(),
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Kolkata").format("『D/MM/YYYY』 【HH:mm:ss】");
 var link =                                     
-["https://i.postimg.cc/WpB6gpR7/Picsart-24-02-02-17-06-18-278.jpg"];
+["https://i.imgur.com/VMJCDqw.jpeg"];
 var callback = () => api.sendMessage({body:`===𝐂𝐡 𝐌𝐚𝐍𝐧𝐈 𝘽𝙊𝙏===\n\n☄️𝘽𝙊𝙏𝙉𝘼𝙈𝙀☄️ »» ${global.config.BOTNAME}\n🌸𝙋𝙍𝙀𝙁𝙄𝙓🌸  »» ${global.config.PREFIX} ««\n\n🥳𝙐𝙋𝙏𝙄𝙈𝙀🥳\n\n𝑫𝑨𝑻𝑬 𝑨𝑵𝑫 𝑻𝑰𝑴𝑬 \n${juswa}\n\n⚡𝘽𝙊𝙏 𝙄𝙎 𝙍𝙐𝙉𝙉𝙄𝙉𝙂⚡ \n🕛${hours}:${minutes}:${seconds}🕧.
 ...
 `,attachment: fs.createReadStream(__dirname + "/cache/juswa1.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa1.jpg")); 
