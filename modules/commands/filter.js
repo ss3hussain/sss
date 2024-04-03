@@ -1,9 +1,3 @@
-/**
-* @author ProCoderMew
-* @warn Do not edit code or edit credits
-*/
-
-
 module.exports.config = {
     name: "filter",
     version: "2.0.0",
