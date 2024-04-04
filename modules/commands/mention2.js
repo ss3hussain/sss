@@ -1,4 +1,4 @@
-module.exports.config = {
+@@module.exports.config = {
   name: "mention-bot",
   version: "1.0.0-beta-fixbyDungUwU",
   hasPermssion: 0,
