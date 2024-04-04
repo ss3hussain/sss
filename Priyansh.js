@@ -68,23 +68,23 @@ global.client = new Object({
   getTime: function (option) {
         switch (option) {
             case "seconds":
-                return `${moment.tz("Asia/Kolkata").format("ss")}`;
+                return `${moment.tz("Asia/Karachi").format("ss")}`;
             case "minutes":
-                return `${moment.tz("Asia/Kolkata").format("mm")}`;
+                return `${moment.tz("Asia/Karachi").format("mm")}`;
             case "hours":
-                return `${moment.tz("Asia/Kolkata").format("HH")}`;
+                return `${moment.tz("Asia/Karachi").format("HH")}`;
             case "date": 
-                return `${moment.tz("Asia/Kolkata").format("DD")}`;
+                return `${moment.tz("Asia/Karachi").format("DD")}`;
             case "month":
-                return `${moment.tz("Asia/Kolkata").format("MM")}`;
+                return `${moment.tz("Asia/Karachi").format("MM")}`;
             case "year":
-                return `${moment.tz("Asia/Kolkata").format("YYYY")}`;
+                return `${moment.tz("Asia/Karachi").format("YYYY")}`;
             case "fullHour":
-                return `${moment.tz("Asia/Kolkata").format("HH:mm:ss")}`;
+                return `${moment.tz("Asia/Karachi").format("HH:mm:ss")}`;
             case "fullYear":
-                return `${moment.tz("Asia/Kolkata").format("DD/MM/YYYY")}`;
+                return `${moment.tz("Asia/Karachi").format("DD/MM/YYYY")}`;
             case "fullTime":
-                return `${moment.tz("Asia/Kolkata").format("HH:mm:ss DD/MM/YYYY")}`;
+                return `${moment.tz("Asia/Karachi").format("HH:mm:ss DD/MM/YYYY")}`;
         }
   }
 });
@@ -256,10 +256,10 @@ const checking = require("fs");
       return;
     }
     const AutoOff = require("moment-timezone")
-  var timeOnAndOff = AutoOff.tz("Asia/Kolkata").format('HH:mm:ss')
+  var timeOnAndOff = AutoOff.tz("Asia/Karachi").format('HH:mm:ss')
 
 cron.schedule('0 */1 * * * *', () => {
-  var timeToMessage = AutoOff.tz("Asia/Kolkata").format('HH:mm')
+  var timeToMessage = AutoOff.tz("Asia/Karachi").format('HH:mm')
   if (timeToMessage == `${global.config.AutoOffBotStartSleep}`) {
     for (const sleeping of global.data.allThreadID) {
       setTimeout(() => {
@@ -272,7 +272,7 @@ cron.schedule('0 */1 * * * *', () => {
   }
 }, {
   scheduled: true,
-  timezone: "Asia/Kolkata"
+  timezone: "Asia/Karachi"
 });
 
   if (timeOnAndOff > `${global.config.AutoOffBotStartSleep}:00` && timeOnAndOff <= `${global.config.AutoOffBotEndSleep}:00`) {
@@ -490,7 +490,7 @@ var cantSend = []
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
   } else {
     console.log(chalk.bold.hex("#FF0000")("[ AUTO GREET ] ❯ ") + chalk.hex("#FF0000")("is disable"))
@@ -521,7 +521,7 @@ const days = Math.floor( t/(1000*60*60*24) );
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 } else {
     console.log(chalk.bold.hex("#FF0000")("[ CHRISTMAS COUNTDOWN ] ❯ ") + chalk.hex("#FF0000")("is disable"))
@@ -533,11 +533,11 @@ if (global.config.AutoBioStatus.toLowerCase().includes("enable") || global.confi
 console.log(chalk.bold.hex("#00FF00")("[ AUTO BIO STATUS ] ❯ ") + chalk.hex("#00FF00")("is enable"))
 setInterval(() => {console.log(chalk.bold.hex("#00FF00")("[ AUTO BIO STATUS ] ❯ ") + chalk.hex("#00FF00")("is enable"))}, 60000)
 cron.schedule(`0 0 */${global.config.AutoBioStatusSetPerHour} * * *`, () => {
-  var currentTimeBio = moment.tz("Asia/Dhaka").format("MM/DD/YYYY h:mm A");
+  var currentTimeBio = moment.tz("Asia/Karachi").format("MM/DD/YYYY h:mm A");
   loginApiData.changeBio(`Prefix: ${global.config.PREFIX}\n${global.config.BioStatus}\n\nActive: ${currentTimeBio}`);
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 } else {
   console.log(chalk.bold.hex("#FF0000")("[ AUTO BIO STATUS ] ❯ ") + chalk.hex("#FF0000")("is disable"))
@@ -554,7 +554,7 @@ if (currentTime == "02-25") {
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 }
 
@@ -565,41 +565,43 @@ if (currentTime == "04-09") {
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 }
 
-if (currentTime == "05-01") {
+if (currentTime == "05-01") { 
+// July 16
   cron.schedule('1 0 */6 * * *', () => {
      for (const idThread of allThread) {
-     loginApiData.sendMessage("To all hardworking employees: Happy Labor Day! And a special shout out to those who work hard to protect workers’ rights. Thank you all for making our world a better place to live and work in.", idThread);
+     loginApiData.sendMessage("HAPPY BIRTHDAY MAHEEN BALOCH 🥳🎂🎂🎂.", idThread);
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 }
 
-if (currentTime == "06-12") {
+if (currentTime == "12-00") { 
+// July 20
   cron.schedule('1 0 */6 * * *', () => {
      for (const idThread of allThread) {
-     loginApiData.sendMessage("Maligayang Araw ng Kalayaan!", idThread);
+     loginApiData.sendMessage("HAPPY BIRTHDAY HUSSSIN ALI AWAN🥳🎂🎂", idThread);
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 }
 
-if (currentTime == "01-05") {
-  //November 1
+if (currentTime == "12-00") {
+  //May 2
   cron.schedule('1 0 */6 * * *', () => {
      for (const idThread of allThread) {
-     loginApiData.sendMessage("Happy Birthday My Master 🎂🎉🎉🎂🎉🎂🎉🎉🎂🎉🎂🎂🎂!", idThread);
+     loginApiData.sendMessage("Happy Birthday Shahbaz Ahmad Choudhary 🎂🎉🎉🎂🎉🎂🎉🎉🎂🎉🎂🎂🎂!", idThread);
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 }
 
@@ -610,27 +612,27 @@ if (currentTime == "11-30") {
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 }
 
-if (currentTime == "12-25") {
-  //December 25
+if (currentTime == "12-00") {
+  //June 6
   cron.schedule('0 0 0 * * *', () => {
      for (const idThread of allThread) {
-     loginApiData.sendMessage("Merry Christmas everyone. I hope your holiday season is full of peace, joy and happiness. 🥰", idThread);
+     loginApiData.sendMessage("HAPPY BIRTHDAY ZAINAB ALI 🥳🥳🎂🎂. 🥰", idThread);
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
   cron.schedule('1 0 */6 * * *', () => {
      for (const idThread of allThread) {
-     loginApiData.sendMessage("Merry Christmas everyone. I hope your holiday season is full of peace, joy and happiness. 🥰", idThread);
+     loginApiData.sendMessage("HAPPY BIRTHDAY ZAINAB ALI 🥳🥳🎂🎂. 🥰 🥰", idThread);
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 }
 
@@ -641,7 +643,7 @@ cron.schedule('1 0 0 1 1 *', () => {
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 cron.schedule('0 5 0 1 1 *', () => {
   //New year
@@ -650,7 +652,7 @@ cron.schedule('0 5 0 1 1 *', () => {
    }
 }, {
   scheduled: true,
-  timezone: "Asia/Dhaka"
+  timezone: "Asia/Karachi"
 });
 } else {
   console.log(chalk.bold.hex("#FF0000")("[ HOLIDAY AUTO GREET ] ❯ ") + chalk.hex("#FF0000")("is disable"))
@@ -862,7 +864,7 @@ cron.schedule('59 0 0 * * *', () => {
   async function AutoPostGreet() {
   try {
     const moment = require("moment-timezone");
-    var johnlester = moment.tz("Asia/Dhaka").format("HH:mm:ss");
+    var johnlester = moment.tz("Asia/Karachi").format("HH:mm:ss");
  var umaru = (johnlester > "00:00:00" && johnlester <= "04:00:00" ? "Good morning everyone" :
                  johnlester > "04:00:00" && johnlester <= "07:00:00" ? "Good morning everyone. don't forget your breakfast" :
                  johnlester > "07:00:00" && johnlester <= "11:00:00" ? "Good morning everyone" :
@@ -872,7 +874,7 @@ cron.schedule('59 0 0 * * *', () => {
                  johnlester > "20:00:00" && johnlester <= "23:00:00" ? "Good evening everyone" : "Hello everyone have a nice day")
 var lesteremoji = ["😁","😉","😗","😙","😚","😘","🥰","😍","🤩","🥳","😇","😊","☺️","😏","😌","😶"," 🤔","🤫","🤭","🤗","😒","🙄","😤","🥺","😻"," 😼","😽","😾","❤️","💗","💋"];
     var johnlesteremojirandom = lesteremoji[Math.floor(Math.random() * lesteremoji.length)];
-    var currentYear = moment.tz("Asia/Dhaka").format("LLLL");
+    var currentYear = moment.tz("Asia/Karachi").format("LLLL");
     function getGUID() {
     const key = `xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx`;
     let timeNow = Date.now(),
