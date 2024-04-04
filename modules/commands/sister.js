@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "sister",
+    name: "sis + bro",
     version: "7.3.1",
     hasPermssion: 0,
     credits: " Priyansh Rajput", 
