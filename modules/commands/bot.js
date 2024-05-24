@@ -494,7 +494,7 @@ if ((event.body.toLowerCase() == "😏") || (event.body.toLowerCase() == "😤")
     var msg = {
       body: `➪${name}➪, ${rand}
       
-      ★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀  ཫ༄𒁍≛ ᗰᖇ᭄﹅ ᗰᗩᑎᑎI﹅ メꪜ `
+      ★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀  ཫ༄𒁍≛ ᗰᖇ᭄﹅ ᕼᑌՏՏᗩIᑎ ᗩᗯᗩᑎ﹅ メꪜ `
     }
     return api.sendMessage(msg, threadID, messageID);
   };
