@@ -26,11 +26,11 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 
  var { threadID, messageID } = event;
 
- if (event.body.indexOf("husain")==0 || (event.body.indexOf("Hussain")==0 || (event.body.indexOf("@Hussain Ali")==0 || (event.body.indexOf("Malik")==0)))) {
+ if (event.body.indexOf("Owner")==0 || (event.body.indexOf("Hussain")==0 || (event.body.indexOf("@Hussain Ali")==0 || (event.body.indexOf("Admin")==0)))) {
 
   var msg = {
 
-    body: "😘𝐇𝐮𝐬𝐬𝐚𝐢𝐧 𝐀𝐥𝐢 𝐀𝐰𝐚𝐧 𝐡𝐞𝐫𝐞😍🩷🥰",
+    body: "𝑮 𝑴𝒆𝑹𝒊 𝑱𝒂𝑵 𝑩𝒐𝒔𝑺 𝑨𝑩𝒊 𝒃𝒖𝑺𝒚 𝑯𝒂𝒊 𝒃𝑻𝒂𝒐 𝒌𝒊𝑨 𝒌𝑨𝒎 𝑨𝒑 𝒌𝑶𝒐🤧",
 
     attachment: fs.createReadStream(__dirname + `/noprefix/hussain.jpg`)
 
@@ -46,4 +46,4 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 
 
 
-}
+ }
