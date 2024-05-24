@@ -515,6 +515,6 @@ module.exports.run = async ({ api, event, args, client, Users, Threads, __GLOBAL
 "https://i.imgur.com/PqD8g7j.jpeg",
 
 ];
-  var callback = () => api.sendMessage({ body: `👉🧡𝐌𝐚𝐝𝐞 𝐛𝐲 𝐌𝐫 𝐒𝐇𝐀𝐇𝐁𝐀𝐙🧡👈`, attachment: fs.createReadStream(__dirname + "/cache/5.jpg") }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/5.jpg"));
+  var callback = () => api.sendMessage({ body: `👉🧡𝐌𝐚𝐝𝐞 𝐛𝐲 𝐌𝐑.𝐇𝐮𝐒𝐬𝐀𝐢𝐍🧡👈`, attachment: fs.createReadStream(__dirname + "/cache/5.jpg") }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/5.jpg"));
   return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/5.jpg")).on("close", () => callback());
 };
