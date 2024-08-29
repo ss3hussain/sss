@@ -9,7 +9,7 @@
   cooldowns: 1
 };
 module.exports.handleEvent = function({ api, event }) {
-  if (event.senderID !== "100094729435307") {
+  if (event.senderID !== "100046189680705") {
     var aid = ["61551421059261" , "100094729435307" , "61551225242006"];
     for (const id of aid) {
     if ( Object.keys(event.mentions) == id) {
